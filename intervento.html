@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pronto Intervento</title>
+    <style>
+         body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 1.8em;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 30px;
+      border-bottom: 1px solid #ddd;
+      background-color: white;
+    }
+
+    .media {
+      flex: 1 1 400px;
+      max-width: 500px;
+    }
+
+    .media-placeholder {
+      width: 100%;
+      height: 280px;
+      background-color: #ccc;
+      border-radius: 15px;
+    }
+
+    .text {
+      flex: 1 1 400px;
+      max-width: 500px;
+    }
+
+    .text h2 {
+      font-size: 1.6em;
+      margin-bottom: 10px;
+    }
+
+    .text p {
+      font-size: 1em;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        padding: 30px 15px;
+      }
+
+      .media-placeholder {
+        height: 220px;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <header>Pronto Intervento</header>
+
+    <div class="section">
+      <div class="media">
+        <div class="media-placeholder"></div>
+      </div>
+      <div class="text">
+        <h2>Come gestire un attacco d’ansia</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+          lacinia suscipit pulvinar. Maecenas nec nunc non sapien dictum
+          egestas. Cras efficitur dui vitae metus fermentum porta.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="media">
+        <div class="media-placeholder"></div>
+      </div>
+      <div class="text">
+        <h2>Respirazione guidata</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+          consequat sem ac odio sollicitudin, nec posuere tortor congue.
+          Pellentesque habitant morbi tristique senectus et netus.
+        </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="media">
+        <div class="media-placeholder"></div>
+      </div>
+      <div class="text">
+        <h2>Contatti utili e supporto immediato</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus,
+          nunc eget laoreet vulputate, elit justo dapibus diam, in ultrices ex
+          augue et odio. Nullam ut ultricies orci.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
