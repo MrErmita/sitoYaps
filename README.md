@@ -31,7 +31,7 @@ Questo progetto è nato come parte di una collaborazione tra l'**ITTS A. Volta d
 
 ## 📅 **Ultimo Aggiornamento**
 
-Ultimo aggiornamento: **12 Maggio 2025**
+[![Ultimo Aggiornamento](https://img.shields.io/badge/Ultimo%20Aggiornamento-12%20Maggio%202025-blue)](https://github.com/MrErmita/sitoYaps/commits/main)
 
 ---
 
@@ -56,22 +56,6 @@ Se desideri contribuire a migliorare questo progetto o hai suggerimenti, puoi fa
 
 ---
 
-## 💬 **Contatti**
-
-- **Email:** mrermita@example.com
-- **Twitter:** [@MrErmita](https://twitter.com/MrErmita)
-
----
-
 ## 📜 **Licenza**
 
 Distribuito sotto la licenza MIT. Vedi [LICENSE](LICENSE) per i dettagli.
-
----
-
-## 🎨 **Screenshot**
-
-Ecco alcune immagini di esempio del sito in azione:
-
-![Screenshot1](screenshot1.png)
-![Screenshot2](screenshot2.png)
