@@ -13,6 +13,12 @@
       margin: 0;
       padding: 0;
       user-select: none;
+      background-image: url('res/sfondoChiaro.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll;
+      min-height: 100vh;
     }
 
     .bg-purple {
@@ -44,9 +50,9 @@
     .container-boxes {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      max-width: 95%;
-      margin: 2rem auto;
+      gap: 1rem;
+      max-width: 60%;
+      margin: 1.5rem auto;
     }
 
     .card-link {
@@ -56,9 +62,9 @@
 
     .box {
       background-color: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+      padding: 0.5rem;
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       height: 100%;
@@ -66,26 +72,34 @@
 
     .box:hover {
       transform: scale(1.02);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
 
     .box h2 {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
       color: #222;
     }
 
     .image img {
-      width: 90%;
+      width: 60%;
       height: auto;
-      border-radius: 10px;
+      border-radius: 8px;
       object-fit: cover;
+    }
+
+    .titleContainer {
+      width: 25%;
+      margin: auto;
+      margin-top: 1%;
+      margin-bottom: 2%;
     }
 
     @media (max-width: 768px) {
       .container-boxes {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1rem;
+        max-width: 90%;
       }
 
       .navbar-title {
@@ -100,34 +114,13 @@
       .titleContainer {
         width: 80%;
       }
-    }
-
-    .titleContainer {
-      width: 35%;
-      margin: auto;
-      margin-top: 1%;
-      margin-bottom: 2%;
-      border: 1px solid black;
-    }
-
-    @media (min-width: 769px) {
-      .container-boxes {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        max-width: 80%;
-      }
-
-      .box {
-        padding: 0.75rem;
-        font-size: 0.95rem;
-      }
 
       .box h2 {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
 
       .image img {
-        width: 80%;
+        width: 70%;
       }
     }
   </style>
@@ -137,14 +130,13 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-purple navbar-custom">
     <div class="container-fluid d-flex align-items-center">
-      <!-- Menu a sinistra -->
       <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse mt-2" id="navbarMenu">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link text-white" href="intervento.html">Pronto Intervento</a>
+            <a class="nav-link text-white" href="intervento.html">Pronto intervento</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="scopri.html">Scopri di più</a>
@@ -162,7 +154,7 @@
 
   <!-- Titolo -->
   <div class="titleContainer">
-    <img src="res/home/title.png" alt="titolo" width="100%" height="100%">
+    <img src="res/logo.png" alt="titolo" width="100%" height="100%">
   </div>
 
   <!-- Card Container -->
