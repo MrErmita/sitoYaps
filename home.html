@@ -45,9 +45,8 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
-      max-width: 900px;
+      max-width: 95%;
       margin: 2rem auto;
-      padding: 0 1rem;
     }
 
     .card-link {
@@ -81,7 +80,6 @@
       height: auto;
       border-radius: 10px;
       object-fit: cover;
-      aspect-ratio: 16 / 9;
     }
 
     @media (max-width: 768px) {
@@ -94,9 +92,42 @@
         font-size: 1.2rem;
         padding-bottom: 20%;
       }
+
       .navbar-text-end {
         font-size: 0.9rem;
-        
+      }
+
+      .titleContainer {
+        width: 80%;
+      }
+    }
+
+    .titleContainer {
+      width: 35%;
+      margin: auto;
+      margin-top: 1%;
+      margin-bottom: 2%;
+      border: 1px solid black;
+    }
+
+    @media (min-width: 769px) {
+      .container-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        max-width: 80%;
+      }
+
+      .box {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+      }
+
+      .box h2 {
+        font-size: 1rem;
+      }
+
+      .image img {
+        width: 80%;
       }
     }
   </style>
@@ -126,19 +157,13 @@
           </li>
         </ul>
       </div>
-
-      <!-- Titolo al centro -->
-      <div class="mx-auto">
-        <div class="navbar-title">CHE ANSIA!</div>
-      </div>
-
-      <!-- Testo a destra -->
-      <div class="navbar-text-end">Gruppo YAPS</div>
     </div>
-
-    <!-- Menu (collassabile) -->
-   
   </nav>
+
+  <!-- Titolo -->
+  <div class="titleContainer">
+    <img src="res/home/title.png" alt="titolo" width="100%" height="100%">
+  </div>
 
   <!-- Card Container -->
   <div class="container-boxes">

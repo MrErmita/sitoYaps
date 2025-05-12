@@ -27,8 +27,61 @@
     header {
       background-color: #a331cd;
       color: white;
-      padding: 30px 20px;
+      padding: 20px;
       font-size: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      min-height: 80px;
+    }
+
+    header a {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .media {
+      flex: 1 1 400px;
+      max-width: 500px;
+    }
+
+    .text {
+      flex: 1 1 400px;
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .text h2 {
+      font-size: 1.6em;
+      margin-bottom: 10px;
+    }
+
+    .text p {
+      font-size: 1em;
+      color: #444;
+      line-height: 1.6;
+    }
+    .container-main {
+      width: 80%;
+      margin: 30px auto;
     }
   </style>
   <body>
@@ -51,19 +104,25 @@
       <br />
     </header>
 
-    <br />
-    <div class="imageCont w-50 h-50">
-      <img
-      src="res/contatti/locandinaContatti.jpeg"
-      alt="locandinaContatti"
-      width="50%"
-      height="50%"
-    />
-    </div>
-    <h2>
-      Per contattare direttamente il CSG Perugia rivolgersi alla pagina
-      instagram: @csg_comune_pg
-    </h2>
-    <h2>Oppure al numero 3407301886</h2>
+    <div class="container-main">
+      <div class="section">
+        <div class="media">
+          <img
+            src="res/contatti/locandinaContatti.jpeg"
+            alt="locandinaContatti"
+            width="100%"
+            height="100%"
+          />
+        </div>
+        <div class="text">
+          <h2>Contatti</h2>
+          <p>
+            Per contattare direttamente il CSG Perugia rivolgersi alla pagina Instagram: @csg_comune_pg oppure al numero 3407301886
+            <br />
+            Referente Progetto YAPS d'Istituto: Sandro Piermattei, contattabile alla mail sandro.piermattei@gmail.com 
+          </p>
+        </div>
+      </div>
   </body>
 </html>
+
