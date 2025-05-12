@@ -8,8 +8,6 @@
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-      crossorigin="anonymous"
     />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
@@ -115,9 +113,6 @@
         transition: .5s ease;
         background-color: rgba(0, 0, 0, 0.3);
         user-select: none;
-        --webkit-user-select: none;
-        -ms-user-select: none;
-        -moz-user-select: none;
         border-radius: 10px;
       }
 
@@ -132,8 +127,6 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-align: center;
       }
@@ -145,21 +138,13 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 0.95);
         z-index: 10000;
-        overflow: auto;
+        overflow: hidden;
         align-items: center;
         justify-content: center;
       }
-      
-      .modal-content-panel {
-        max-width: 90%;
-        max-height: 90vh;
-        object-fit: contain;
-        margin: auto;
-        display: block;
-      }
-      
+
       .close-panel {
         position: fixed;
         top: 20px;
@@ -171,7 +156,7 @@
         transition: 300ms;
         z-index: 10001;
       }
-      
+
       .close-panel:hover,
       .close-panel:focus {
         color: #d20000;
@@ -179,15 +164,30 @@
         cursor: pointer;
         transform: rotate(360deg);
       }
-      
-      /* Stile per il carousel */
+
+      .zoom-container {
+        max-width: 90%;
+        max-height: 90vh;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        cursor: grab;
+      }
+
+      .zoom-container img {
+        transition: transform 0.25s ease;
+        will-change: transform;
+        display: block;
+        max-width: none;
+        max-height: none;
+      }
+
       .carousel-inner img {
         border-radius: 10px;
         max-height: 500px;
         object-fit: contain;
       }
-      
-      /* Stile per l'immagine del fumetto */
+
       .fumetto-img {
         width: 100%;
         height: auto;
@@ -199,21 +199,11 @@
   <body>
     <header>
       Info
-      <a href="home.html" style="float: left">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
-          fill="white"
-          class="bi bi-house"
-          viewBox="0 1 16 16"
-        >
-          <path
-            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
-          />
+      <a href="home.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-house" viewBox="0 1 16 16">
+          <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
         </svg>
       </a>
-      <br />
     </header>
 
     <div class="container-main">
@@ -222,63 +212,29 @@
           <div id="carouselExampleControls" class="carousel slide">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img
-                  class="d-block w-100"
-                  src="res/info/presentazione/ppt1.jpg"
-                  alt="First slide"
-                />
+                <img class="d-block w-100" src="res/info/presentazione/ppt1.jpg" alt="First slide" />
               </div>
               <div class="carousel-item">
-                <img
-                  class="d-block w-100"
-                  src="res/info/presentazione/ppt2.jpg"
-                  alt="Second slide"
-                />
+                <img class="d-block w-100" src="res/info/presentazione/ppt2.jpg" alt="Second slide" />
               </div>
               <div class="carousel-item">
-                <img
-                  class="d-block w-100"
-                  src="res/info/presentazione/ppt3.jpg"
-                  alt="Third slide"
-                />
+                <img class="d-block w-100" src="res/info/presentazione/ppt3.jpg" alt="Third slide" />
               </div>
               <div class="carousel-item">
-                <img
-                  class="d-block w-100"
-                  src="res/info/presentazione/ppt4.jpg"
-                  alt="Fourth slide"
-                />
+                <img class="d-block w-100" src="res/info/presentazione/ppt4.jpg" alt="Fourth slide" />
               </div>
               <div class="carousel-item">
-                <img
-                  class="d-block w-100"
-                  src="res/info/presentazione/ppt5.jpg"
-                  alt="Fifth slide"
-                />
+                <img class="d-block w-100" src="res/info/presentazione/ppt5.jpg" alt="Fifth slide" />
               </div>
               <div class="carousel-item">
-                <img
-                  class="d-block w-100"
-                  src="res/info/presentazione/ppt6.jpg"
-                  alt="Sixth slide"
-                />
+                <img class="d-block w-100" src="res/info/presentazione/ppt6.jpg" alt="Sixth slide" />
               </div>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleControls"
-              data-bs-slide="prev"
-            >
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleControls"
-              data-bs-slide="next"
-            >
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
@@ -286,18 +242,14 @@
         </div>
         <div class="text">
           <h2>Presentazione Informativa</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            lacinia suscipit pulvinar. Maecenas nec nunc non sapien dictum
-            egestas. Cras efficitur dui vitae metus fermentum porta.
-          </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia suscipit pulvinar. Maecenas nec nunc non sapien dictum egestas. Cras efficitur dui vitae metus fermentum porta.</p>
         </div>
       </div>
 
       <div class="section">
         <div class="media">
           <div class="img-container mx-auto">
-            <img src="res/info/presentazione/ppt1.jpg" class="copertinaFumetto img-fluid but-img fumetto-img" alt="copertinaFumetto"/>
+            <img src="res/info/copertinaFumetto.jpg" class="copertinaFumetto img-fluid but-img fumetto-img" alt="copertinaFumetto" />
             <div class="overlay" onclick="fullScreen('res/info/fumettoAnsia.jpg')">
               <div class="overlay-text material-icons">&#xe5d0;</div>
             </div>
@@ -305,48 +257,102 @@
         </div>
         <div class="text">
           <h2>Fumetto sull'Ansia</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            lacinia suscipit pulvinar. Maecenas nec nunc non sapien dictum
-            egestas. Cras efficitur dui vitae metus fermentum porta.
-          </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia suscipit pulvinar. Maecenas nec nunc non sapien dictum egestas. Cras efficitur dui vitae metus fermentum porta.</p>
         </div>
       </div>
     </div>
 
     <div id="carouselModal" class="modal-panel">
       <span class="close-panel" onclick="closeCarousel()">&times;</span>
-      <img class="modal-content-panel" id="modalImage" src="" alt="Fumetto Ansia">
+      <div class="zoom-container" id="zoomContainer">
+        <img class="modal-content-panel" id="modalImage" src="" alt="Fumetto Ansia" />
+      </div>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-      crossorigin="anonymous"
-    ></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+      const zoomContainer = document.getElementById('zoomContainer');
+      const modalImage = document.getElementById('modalImage');
+      let scale = 1;
+      let pos = { x: 0, y: 0 };
+      let isDragging = false;
+      let start = { x: 0, y: 0 };
+
+      function updateTransform() {
+        modalImage.style.transform = `translate(${pos.x}px, ${pos.y}px) scale(${scale})`;
+      }
+
+      // Mouse support
+      zoomContainer.onmousedown = function (e) {
+        isDragging = true;
+        start = { x: e.clientX - pos.x, y: e.clientY - pos.y };
+        zoomContainer.style.cursor = 'grabbing';
+      };
+
+      zoomContainer.onmouseup = function () {
+        isDragging = false;
+        zoomContainer.style.cursor = 'grab';
+      };
+
+      zoomContainer.onmouseleave = function () {
+        isDragging = false;
+        zoomContainer.style.cursor = 'grab';
+      };
+
+      zoomContainer.onmousemove = function (e) {
+        if (isDragging) {
+          pos = { x: e.clientX - start.x, y: e.clientY - start.y };
+          updateTransform();
+        }
+      };
+
+      // Touch support
+      zoomContainer.addEventListener('touchstart', function (e) {
+        if (e.touches.length === 1) {
+          isDragging = true;
+          const touch = e.touches[0];
+          start = { x: touch.clientX - pos.x, y: touch.clientY - pos.y };
+        }
+      });
+
+      zoomContainer.addEventListener('touchmove', function (e) {
+        if (isDragging && e.touches.length === 1) {
+          const touch = e.touches[0];
+          pos = { x: touch.clientX - start.x, y: touch.clientY - start.y };
+          updateTransform();
+        }
+      });
+
+      zoomContainer.addEventListener('touchend', function () {
+        isDragging = false;
+      });
+
+      // Zoom with mouse wheel
+      modalImage.onwheel = function (e) {
+        e.preventDefault();
+        const delta = e.deltaY > 0 ? -0.1 : 0.1;
+        scale = Math.min(Math.max(0.5, scale + delta), 5);
+        updateTransform();
+      };
+
       function fullScreen(imgSrc) {
-        var modal = document.getElementById('carouselModal');
-        var modalImg = document.getElementById('modalImage');
-        modalImg.src = imgSrc;
-        modal.style.display = "flex";
+        scale = 1;
+        pos = { x: 0, y: 0 };
+        modalImage.style.transform = "none";
+        modalImage.src = imgSrc;
+        document.getElementById('carouselModal').style.display = "flex";
         document.body.style.overflow = "hidden";
       }
 
       function closeCarousel() {
-        var modal = document.getElementById('carouselModal');
-        modal.style.display = "none";
+        document.getElementById('carouselModal').style.display = "none";
         document.body.style.overflow = "auto";
       }
-      
-      // Chiudi il modal se si clicca fuori dall'immagine
-      window.onclick = function(event) {
-        var modal = document.getElementById('carouselModal');
-        if (event.target == modal) {
-          closeCarousel();
-        }
-      }
+
+      // Blocca trascinamento immagini fuori dal modale
+      document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('dragstart', e => e.preventDefault());
+      });
     </script>
   </body>
 </html>
