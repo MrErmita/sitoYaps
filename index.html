@@ -33,20 +33,11 @@
         padding: 0.75rem 1rem;
       }
 
-      .navbar-title {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        color: white;
-        font-weight: bold;
-        font-size: 1.5rem;
-        white-space: nowrap;
-        margin: 0;
+      .navbar-text-end img {
+        height: 40px;
       }
 
       .navbar-text-end {
-        color: white;
-        font-weight: bold;
         margin-left: auto;
       }
 
@@ -70,7 +61,7 @@
         padding: 0.5rem;
         text-align: center;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        height: 100%;        
+        height: 100%;
       }
 
       .box:hover {
@@ -105,13 +96,8 @@
           max-width: 90%;
         }
 
-        .navbar-title {
-          font-size: 1.2rem;
-          padding-bottom: 20%;
-        }
-
-        .navbar-text-end {
-          font-size: 0.9rem;
+        .navbar-text-end img {
+          height: 30px;
         }
 
         .titleContainer {
@@ -127,10 +113,14 @@
         }
       }
 
-      .navbar-text-end {
-        color: white;
-        font-weight: bold;
-        margin-left: auto;
+      .logo-navbar {
+        height: 40px;
+      }
+
+      @media (min-width: 768px) {
+        .logo-navbar {
+          height: 60px;
+        }
       }
     </style>
   </head>
@@ -163,15 +153,26 @@
                 >Contatti utili</a
               >
             </li>
-            
             <li class="nav-item">
               <a class="nav-link text-white" href="materiali.html">Materiali</a>
             </li>
           </ul>
         </div>
-      </div>
 
-      <div class="navbar-text-end">Gruppo YAPS A.Volta</div>
+        <div
+          class="navbar-text-end d-flex align-items-center gap-2 text-white flex-nowrap"
+        >
+          <div class="d-flex flex-column lh-sm">
+            <span class="fw-semibold fs-6 text-nowrap">Rete di scuole che</span>
+            <span class="fw-semibold fs-6 text-nowrap">Promuovono Salute</span>
+          </div>
+          <img
+            src="res/contatti/logoYapsVolta.png"
+            alt="Logo YAPS"
+            style="height: 40px"
+          />
+        </div>
+      </div>
     </nav>
 
     <!-- Titolo -->
@@ -197,7 +198,6 @@
           </div>
         </div>
       </a>
-     
       <a href="contatti.html" class="card-link">
         <div class="box">
           <h2>Contatti utili</h2>
